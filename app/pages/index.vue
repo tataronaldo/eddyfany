@@ -15,7 +15,7 @@
               Building Faith & <br> Foundations
             </h1>
             <p class="text-xl text-slate-600 dark:text-slate-400">
-              Your educational guide to the spiritual ministry and professional construction services of Pastor [Name].
+              Your educational guide to the spiritual ministry and professional construction services of Apostle Eddy Fany.
             </p>
             <UButton
               size="xl"
@@ -23,7 +23,7 @@
               trailing-icon="i-heroicons-arrow-right"
             />
           </div>
-          <div class="hidden lg:block">
+          <div class="block">
             <img
               src="../assets/images/hero.png"
               class="rounded-2xl shadow-2xl"

@@ -69,7 +69,7 @@
             <h2 class="text-2xl font-bold text-white">Mobile Giving</h2>
           </div>
           <p class="text-gray-400 mb-6">
-            Text the word "Give" to the Church <strong class="text-white">416-255-0141</strong>. Then follow the link. It's that easy but still super secure.
+            Text the word "Give" to the Church <strong class="text-white">+237671404260</strong>. Then follow the link. It's that easy but still super secure.
           </p>
           <UButton label="Give Now - Text to the number" color="primary" size="lg" trailing-icon="i-heroicons-chat-bubble-left-right" />
         </div>
@@ -115,22 +115,6 @@
             <UIcon name="i-heroicons-exclamation-circle" class="w-5 h-5" /> Oops! Something went wrong. Please fill in the required fields and try again.
           </p>
         </form>
-      </div>
-    </section>
-
-    <!-- Download App -->
-    <section class="py-16 md:py-20 bg-gray-900 border-t border-gray-800">
-      <div class="max-w-4xl mx-auto px-6 text-center">
-        <div class="inline-flex items-center gap-2 rounded-full bg-primary-500/20 px-4 py-2 text-primary-300 text-sm font-medium mb-4">
-          <UIcon name="i-heroicons-device-phone-mobile" class="w-4 h-4" />
-          Download Our App
-        </div>
-        <h2 class="text-2xl font-bold text-white mb-4">Download Our App</h2>
-        <p class="text-gray-400 mb-8">Get all of our news, upcoming events and more in one place</p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <UButton label="App Store" color="neutral" variant="outline" class="border-gray-600 text-gray-200" />
-          <UButton label="Google Play" color="neutral" variant="outline" class="border-gray-600 text-gray-200" />
-        </div>
       </div>
     </section>
 

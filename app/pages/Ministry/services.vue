@@ -41,13 +41,13 @@
               <span class="font-semibold">Location</span>
             </div>
             <p class="text-gray-300 text-lg mb-6">
-              Muskoka Bible Centre, 8 Pioneer Ave, Huntsville, ON P1H 2J3
+              Completely online! We are a global church with members from all around the world. Join us from the comfort of your home or anywhere you are.
             </p>
             <div class="flex items-center gap-2 text-primary-400">
               <UIcon name="i-heroicons-clock" class="w-6 h-6" />
               <span class="font-semibold">Service Time</span>
             </div>
-            <p class="text-gray-300 text-lg">Every Sunday @ 10:30AM-12:30PM</p>
+            <p class="text-gray-300 text-lg">Every Sunday @ 10:30AM-12:30PM. <br>View our <a class="text-primary-400 underline" href="/Ministry/events">event page</a> for detail time for specific events</p>
           </div>
         </div>
       </div>

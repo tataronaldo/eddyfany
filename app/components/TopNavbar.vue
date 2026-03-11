@@ -1,8 +1,15 @@
-<script setup>
+<script setup lang="ts">
+import { ref } from 'vue'
+
 const colorMode = useColorMode()
+const isMenuOpen = ref(false)
 
 const toggleDarkMode = () => {
   colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+}
+
+const closeMenu = () => {
+  isMenuOpen.value = false
 }
 </script>
 
@@ -65,8 +72,42 @@ const toggleDarkMode = () => {
           color="gray"
           variant="ghost"
           class="md:hidden"
+          @click="isMenuOpen = !isMenuOpen"
         />
       </div>
     </UContainer>
+    <!-- Mobile Menu -->
+    <div v-if="isMenuOpen" class="md:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+      <nav class="flex flex-col p-4 gap-2">
+        <NuxtLink
+          to="/"
+          class="px-4 py-2 text-sm font-medium text-gray-600 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-400 transition-colors rounded"
+          @click="closeMenu"
+        >
+          Home
+        </NuxtLink>
+        <NuxtLink
+          to="/ministry"
+          class="px-4 py-2 text-sm font-medium text-gray-600 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-400 transition-colors rounded"
+          @click="closeMenu"
+        >
+          Ministry
+        </NuxtLink>
+        <NuxtLink
+          to="/construction"
+          class="px-4 py-2 text-sm font-medium text-gray-600 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-400 transition-colors rounded"
+          @click="closeMenu"
+        >
+          Construction
+        </NuxtLink>
+        <NuxtLink
+          to="/contact"
+          class="px-4 py-2 text-sm font-medium text-gray-600 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-400 transition-colors rounded"
+          @click="closeMenu"
+        >
+          Contact Us
+        </NuxtLink>
+      </nav>
+    </div>
   </header>
 </template>
