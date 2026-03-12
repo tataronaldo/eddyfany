@@ -90,7 +90,7 @@
           Our Team
         </h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div v-for="member in team" :key="member.name" class="bg-gray-800/50 rounded-2xl border border-gray-700 overflow-hidden hover:border-primary-500/30 transition-colors">
+          <div v-for="member in team" :key="member.name" class="bg-gray-800/50 rounded-2xl border border-gray-700 overflow-hidden hover:border-primary-400/30 transition-colors">
             <div class="aspect-square bg-gray-800">
               <img :src="member.image" :alt="member.name" class="w-full h-full object-cover">
             </div>

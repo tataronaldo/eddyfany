@@ -1,11 +1,34 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
-const colorMode = useColorMode()
 const isMenuOpen = ref(false)
+const isDarkMode = ref(false)
+
+// Check for saved dark mode preference or system preference
+onMounted(() => {
+  const savedDarkMode = localStorage.getItem('dark-mode')
+  if (savedDarkMode !== null) {
+    isDarkMode.value = savedDarkMode === 'true'
+  } else {
+    // Check system preference
+    isDarkMode.value = window.matchMedia('(prefers-color-scheme: dark)').matches
+  }
+  
+  // Apply dark mode class to document
+  if (isDarkMode.value) {
+    document.documentElement.classList.add('dark')
+  }
+})
 
 const toggleDarkMode = () => {
-  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+  isDarkMode.value = !isDarkMode.value
+  localStorage.setItem('dark-mode', isDarkMode.value.toString())
+  
+  if (isDarkMode.value) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
 }
 
 const closeMenu = () => {
@@ -23,7 +46,7 @@ const closeMenu = () => {
               class="rounded-2xl shadow-2xl w-8 h-8 text-primary-500"
               alt="Artistic Vision"
             >
-          <span>MinConstruct</span>
+          <span>Eddy Fany</span>
         </NuxtLink>
       </div>
 
@@ -54,11 +77,11 @@ const closeMenu = () => {
       <div class="flex items-center gap-2">
         <UButton
          class="cursor-pointer hover:bg-green-500"
-          :icon="colorMode.value === 'dark' ? 'i-heroicons-sun-20-solid' : 'i-heroicons-moon-20-solid'"
+          :icon="isDarkMode ? 'i-heroicons-sun-20-solid' : 'i-heroicons-moon-20-solid'"
           color="gray"
           variant="ghost"
           @click="toggleDarkMode"
-          :aria-label="`Switch to ${colorMode.value === 'dark' ? 'light' : 'dark'} mode`"
+          :aria-label="`Switch to ${isDarkMode ? 'light' : 'dark'} mode`"
         />
         <UButton
           to="/contact"

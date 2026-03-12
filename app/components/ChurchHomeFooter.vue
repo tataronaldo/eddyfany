@@ -36,9 +36,9 @@
           <div>
             <h3 class="font-bold text-sm uppercase tracking-wider text-gray-400 mb-4">Social Media</h3>
             <div class="flex gap-3">
-              <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram"><UIcon name="i-heroicons-camera" class="w-5 h-5" /></a>
-              <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="YouTube"><UIcon name="i-heroicons-play-circle" class="w-5 h-5" /></a>
-              <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook"><UIcon name="i-heroicons-user-group" class="w-5 h-5" /></a>
+              <a href="https://www.instagram.com/eddy_fany/?utm_source=qr&r=nametag" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram"><UIcon name="i-heroicons-camera" class="w-5 h-5" /></a>
+              <a href="www.youtube.com/@edwinfanyuy2153" class="text-gray-400 hover:text-white transition-colors" aria-label="YouTube"><UIcon name="i-heroicons-play-circle" class="w-5 h-5" /></a>
+              <a href="https://www.facebook.com/share/v/1HU57xzy6Z/" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook"><UIcon name="i-heroicons-user-group" class="w-5 h-5" /></a>
               <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="TikTok"><UIcon name="i-heroicons-musical-note" class="w-5 h-5" /></a>
             </div>
           </div>

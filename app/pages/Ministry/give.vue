@@ -87,25 +87,25 @@
         <form class="space-y-6 bg-gray-800/50 rounded-2xl p-8 border border-gray-700" @submit.prevent="onContactSubmit">
           <div class="grid sm:grid-cols-2 gap-6">
             <UFormGroup label="First Name">
-              <UInput v-model="contactForm.firstName" required />
+              <UInput class="w-full" v-model="contactForm.firstName" required />
             </UFormGroup>
             <UFormGroup label="Last Name">
-              <UInput v-model="contactForm.lastName" required />
+              <UInput class="w-full" v-model="contactForm.lastName" required />
             </UFormGroup>
           </div>
           <div class="grid sm:grid-cols-2 gap-6">
             <UFormGroup label="Phone Number">
-              <UInput v-model="contactForm.phone" type="tel" />
+              <UInput class="w-full" v-model="contactForm.phone" type="tel" />
             </UFormGroup>
             <UFormGroup label="Email">
-              <UInput v-model="contactForm.email" type="email" required />
+              <UInput class="w-full" v-model="contactForm.email" type="email" required />
             </UFormGroup>
           </div>
           <UFormGroup label="Message/Questions">
-            <UTextarea v-model="contactForm.message" :rows="4" />
+            <UTextarea class="w-full" v-model="contactForm.message" :rows="4" />
           </UFormGroup>
           <UFormGroup label="Preferred method of communication">
-            <USelect v-model="contactForm.preference" :items="['E-mail', 'Text']" />
+            <USelect class="w-full" v-model="contactForm.preference" :items="['E-mail', 'Text']" />
           </UFormGroup>
           <UButton type="submit" label="Send" size="lg" color="primary" class="w-full" />
           <p v-if="contactSubmitted" class="text-sm text-green-400 flex items-center gap-2">

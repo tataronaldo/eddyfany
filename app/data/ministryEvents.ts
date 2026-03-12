@@ -10,8 +10,42 @@ export type MinistryEvent = {
   imageUrl: string
 }
 
+// Import all event images
+import eventImage1 from '../assets/images/1001769799.jpg.jpeg'
+import eventImage2 from '../assets/images/1001769713.jpeg'
+import eventImage3 from '../assets/images/1001769796.jpg.jpeg'
+import eventImage4 from '../assets/images/1001769790.jpg.jpeg'
+import eventImage5 from '../assets/images/1001769897.jpg.jpeg'
+import eventImage6 from '../assets/images/1001769730.jpg.jpeg'
+import eventImage7 from '../assets/images/1001769830.jpg.jpeg'
+import eventImage8 from '../assets/images/1001769850.jpg.jpeg'
+import eventImage9 from '../assets/images/1001769875.jpg.jpeg'
+import eventImage10 from '../assets/images/1001769925.jpg.jpeg'
+import eventImage11 from '../assets/images/1001769927.jpg.jpeg'
+import eventImage12 from '../assets/images/1001769947.jpg.jpeg'
+import eventImage13 from '../assets/images/1001769977.jpg.jpeg'
+import eventImage14 from '../assets/images/1001769978.jpg.jpeg'
+
 function img(name: string) {
-  return new URL(`../assets/images/${name}`, import.meta.url).href
+  // Map image names to imported modules
+  const imageMap: { [key: string]: string } = {
+    '1001769799.jpg.jpeg': eventImage1,
+    '1001769713.jpeg': eventImage2,
+    '1001769796.jpg.jpeg': eventImage3,
+    '1001769790.jpg.jpeg': eventImage4,
+    '1001769897.jpg.jpeg': eventImage5,
+    '1001769730.jpg.jpeg': eventImage6,
+    '1001769830.jpg.jpeg': eventImage7,
+    '1001769850.jpg.jpeg': eventImage8,
+    '1001769875.jpg.jpeg': eventImage9,
+    '1001769925.jpg.jpeg': eventImage10,
+    '1001769927.jpg.jpeg': eventImage11,
+    '1001769947.jpg.jpeg': eventImage12,
+    '1001769977.jpg.jpeg': eventImage13,
+    '1001769978.jpg.jpeg': eventImage14
+  }
+  
+  return imageMap[name] || '/assets/images/hero.png'
 }
 
 export const ministryEvents: MinistryEvent[] = [

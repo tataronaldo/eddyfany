@@ -17,15 +17,15 @@
           Church is more than a place to attend, it is a place to call home
         </h1>
         <div class="flex flex-wrap items-center justify-center gap-10 sm:gap-12 mt-12">
-          <NuxtLink to="/ministry/services" class="flex items-center gap-2 text-lg font-semibold tracking-wide hover:text-primary-400 transition-colors">
-            <UIcon name="i-heroicons-calendar-days" class="w-5 h-5" />
+          <NuxtLink to="/ministry/sermons" class="flex items-center gap-2 text-lg font-semibold tracking-wide hover:text-primary-400 transition-all duration-300 transform hover:scale-105 cursor-pointer">
+            <UIcon name="i-heroicons-play-circle" class="w-5 h-5" />
             Services
           </NuxtLink>
-          <NuxtLink to="/ministry/events" class="flex items-center gap-2 text-lg font-semibold tracking-wide hover:text-primary-400 transition-colors">
-            <UIcon name="i-heroicons-calendar-days" class="w-5 h-5" />
+          <NuxtLink to="/ministry/events" class="flex items-center gap-2 text-lg font-semibold tracking-wide hover:text-primary-400 transition-all duration-300 transform hover:scale-105 cursor-pointer">
+            <UIcon name="i-simple-icons-calendar" class="w-5 h-5" />
             Events
           </NuxtLink>
-          <NuxtLink to="/ministry/give" class="flex items-center gap-2 text-lg font-semibold tracking-wide hover:text-primary-400 transition-colors">
+          <NuxtLink to="/ministry/give" class="flex items-center gap-2 text-lg font-semibold tracking-wide hover:text-primary-400 transition-all duration-300 transform hover:scale-105 cursor-pointer">
             <UIcon name="i-heroicons-heart" class="w-5 h-5" />
             Give
           </NuxtLink>
@@ -39,7 +39,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           <NuxtLink
             to="/ministry/im-new"
-            class="church-card group block p-8 md:p-10 rounded-xl border border-gray-700 bg-gray-800/50 hover:border-primary-500/50 hover:bg-gray-800 transition-all duration-200"
+            class="church-card group block p-8 md:p-10 rounded-xl border border-gray-700 bg-gray-800/50 hover:border-primary-400/50 hover:bg-gray-800 transition-all duration-200"
           >
             <div class="w-14 h-14 rounded-xl bg-primary-500/20 flex items-center justify-center mb-5">
               <UIcon name="i-heroicons-sparkles" class="w-7 h-7 text-primary-400" />
@@ -51,40 +51,43 @@
           </NuxtLink>
           <NuxtLink
             to="/ministry/events"
-            class="church-card group block p-8 md:p-10 rounded-xl border border-gray-700 bg-gray-800/50 hover:border-primary-500/50 hover:bg-gray-800 transition-all duration-200"
+            class="church-card group block p-8 md:p-10 rounded-xl border border-gray-700 bg-gray-800/50 hover:border-green-400/50 hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 cursor-pointer"
           >
-            <div class="w-14 h-14 rounded-xl bg-primary-500/20 flex items-center justify-center mb-5">
-              <UIcon name="i-heroicons-calendar-days" class="w-7 h-7 text-primary-400" />
+            <div class="w-14 h-14 rounded-xl bg-primary-500/20 flex items-center justify-center mb-5 group-hover:bg-primary-500/30 transition-colors">
+              <UIcon name="i-simple-icons-calendar" class="w-7 h-7 text-primary-400" />
             </div>
-            <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-primary-300">Events</h3>
+            <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-green-300">Events</h3>
             <p class="text-gray-400 leading-relaxed">
               See what is coming up in church life and register for upcoming events.
             </p>
           </NuxtLink>
-          <div class="church-card p-8 md:p-10 rounded-xl border border-gray-700 bg-gray-800/50">
-            <div class="w-14 h-14 rounded-xl bg-primary-500/20 flex items-center justify-center mb-5">
+          <NuxtLink
+            to="/ministry/prayer-request"
+            class="church-card group block p-8 md:p-10 rounded-xl border border-gray-700 bg-gray-800/50 hover:border-green-400/50 hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+          >
+            <div class="w-14 h-14 rounded-xl bg-primary-500/20 flex items-center justify-center mb-5 group-hover:bg-primary-500/30 transition-colors">
               <UIcon name="i-heroicons-heart" class="w-7 h-7 text-primary-400" />
             </div>
-            <h3 class="text-2xl font-bold mb-3 text-white">Prayer Requests</h3>
+            <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-green-300">Prayer Requests</h3>
             <p class="text-gray-400 leading-relaxed">
-              Have a Prayer Request? Learn on how to act on it through our website.
+              Have a Prayer Request? Submit it and let our prayer team stand with you in faith.
             </p>
-          </div>
+          </NuxtLink>
           <NuxtLink
-            to="/ministry/services"
-            class="church-card group block p-8 md:p-10 rounded-xl border border-gray-700 bg-gray-800/50 hover:border-primary-500/50 hover:bg-gray-800 transition-all duration-200"
+            to="/ministry/sermons"
+            class="church-card group block p-8 md:p-10 rounded-xl border border-gray-700 bg-gray-800/50 hover:border-green-400/50 hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 cursor-pointer"
           >
-            <div class="w-14 h-14 rounded-xl bg-primary-500/20 flex items-center justify-center mb-5">
-              <UIcon name="i-heroicons-calendar-days" class="w-7 h-7 text-primary-400" />
+            <div class="w-14 h-14 rounded-xl bg-primary-500/20 flex items-center justify-center mb-5 group-hover:bg-primary-500/30 transition-colors">
+              <UIcon name="i-simple-icons-calendar" class="w-7 h-7 text-primary-400" />
             </div>
-            <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-primary-300">Online Services</h3>
+            <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-green-300">Online Services</h3>
             <p class="text-gray-400 leading-relaxed">
-              See our schedule and join our live online services from anywhere in the world.
+              See our schedule and join our live online services from anywhere in world.
             </p>
           </NuxtLink>
           <NuxtLink
             to="#get-involved"
-            class="church-card group block p-8 md:p-10 rounded-xl border border-gray-700 bg-gray-800/50 hover:border-primary-500/50 hover:bg-gray-800 transition-all duration-200"
+            class="church-card group block p-8 md:p-10 rounded-xl border border-gray-700 bg-gray-800/50 hover:border-primary-400/50 hover:bg-gray-800 transition-all duration-200"
           >
             <div class="w-14 h-14 rounded-xl bg-primary-500/20 flex items-center justify-center mb-5">
               <UIcon name="i-heroicons-hand-raised" class="w-7 h-7 text-primary-400" />
@@ -97,7 +100,7 @@
           <NuxtLink
             to="/ministry/give"
             id="give"
-            class="church-card group block p-8 md:p-10 rounded-xl border border-gray-700 bg-gray-800/50 hover:border-primary-500/50 hover:bg-gray-800 transition-all duration-200"
+            class="church-card group block p-8 md:p-10 rounded-xl border border-gray-700 bg-gray-800/50 hover:border-primary-400/50 hover:bg-gray-800 transition-all duration-200"
           >
             <div class="w-14 h-14 rounded-xl bg-primary-500/20 flex items-center justify-center mb-5">
               <UIcon name="i-heroicons-gift" class="w-7 h-7 text-primary-400" />
@@ -159,7 +162,7 @@
               </h3>
               <p class="text-gray-400 flex items-center gap-2"><UIcon name="i-heroicons-user-circle" class="w-4 h-4" /> Shawn Spenser</p>
             </div>
-            <UButton to="/ministry/services" label="Watch" color="primary" class="shrink-0 w-full sm:w-auto" trailing-icon="i-heroicons-play" />
+            <UButton to="/ministry/sermons" label="Watch" color="primary" class="shrink-0 w-full sm:w-auto transition-all duration-300 transform hover:scale-105 cursor-pointer" trailing-icon="i-heroicons-play" />
           </div>
           <div class="flex flex-col sm:flex-row sm:items-center gap-6 py-8">
             <div class="w-32 h-20 sm:w-40 sm:h-24 rounded-lg overflow-hidden shrink-0 bg-gray-800">
@@ -172,7 +175,7 @@
               </h3>
               <p class="text-gray-400 flex items-center gap-2"><UIcon name="i-heroicons-user-circle" class="w-4 h-4" /> Michael Lewis</p>
             </div>
-            <UButton to="/ministry/services" label="Watch" color="primary" class="shrink-0 w-full sm:w-auto" trailing-icon="i-heroicons-play" />
+            <UButton to="/ministry/sermons" label="Watch" color="primary" class="shrink-0 w-full sm:w-auto transition-all duration-300 transform hover:scale-105 cursor-pointer" trailing-icon="i-heroicons-play" />
           </div>
           <div class="flex flex-col sm:flex-row sm:items-center gap-6 py-8 last:pb-0">
             <div class="w-32 h-20 sm:w-40 sm:h-24 rounded-lg overflow-hidden shrink-0 bg-gray-800">
@@ -185,7 +188,7 @@
               </h3>
               <p class="text-gray-400 flex items-center gap-2"><UIcon name="i-heroicons-user-circle" class="w-4 h-4" /> Tim Keller</p>
             </div>
-            <UButton to="/ministry/services" label="Watch" color="primary" class="shrink-0 w-full sm:w-auto" trailing-icon="i-heroicons-play" />
+            <UButton to="/ministry/sermons" label="Watch" color="primary" class="shrink-0 w-full sm:w-auto transition-all duration-300 transform hover:scale-105 cursor-pointer" trailing-icon="i-heroicons-play" />
           </div>
         </div>
       </div>
@@ -204,7 +207,7 @@
           <div
             v-for="event in featuredEvents"
             :key="event.id"
-            class="bg-gray-800/50 rounded-2xl border border-gray-700 overflow-hidden hover:border-primary-500/30 transition-colors"
+            class="bg-gray-800/50 rounded-2xl border border-gray-700 overflow-hidden hover:border-primary-400/30 transition-colors"
           >
             <div class="aspect-video bg-gray-800">
               <img :src="event.imageUrl" :alt="event.title" class="w-full h-full object-cover opacity-80">
@@ -257,28 +260,28 @@
           <form class="bg-gray-800/50 rounded-2xl p-8 md:p-10 border border-gray-700" @submit.prevent="onVolunteerSubmit">
             <div class="grid sm:grid-cols-2 gap-6">
               <UFormGroup label="First Name">
-                <UInput v-model="volunteerForm.firstName" required />
+                <UInput class="w-full" v-model="volunteerForm.firstName" required />
               </UFormGroup>
               <UFormGroup label="Last Name">
-                <UInput v-model="volunteerForm.lastName" required />
+                <UInput class="w-full" v-model="volunteerForm.lastName" required />
               </UFormGroup>
             </div>
             <div class="grid sm:grid-cols-2 gap-6 mt-6">
               <UFormGroup label="Phone Number">
-                <UInput v-model="volunteerForm.phone" type="tel" />
+                <UInput class="w-full" v-model="volunteerForm.phone" type="tel" />
               </UFormGroup>
               <UFormGroup label="Email">
-                <UInput v-model="volunteerForm.email" type="email" required />
+                <UInput class="w-full" v-model="volunteerForm.email" type="email" required />
               </UFormGroup>
             </div>
             <UFormGroup label="What team would you like to serve on?" class="mt-6">
-              <USelect
+              <USelect class="w-full"
                 v-model="volunteerForm.team"
                 :items="volunteerTeamOptions"
                 placeholder="Select a team"
               />
             </UFormGroup>
-            <UButton type="submit" label="Submit" class="mt-8 w-full" size="lg" color="primary" />
+            <UButton type="submit" label="Submit" class="mt-8 w-full transition-all duration-300 transform hover:scale-105 cursor-pointer" size="lg" color="primary" />
             <p v-if="volunteerSubmitted" class="mt-4 text-sm text-green-400 flex items-center gap-2">
               <UIcon name="i-heroicons-check-circle" class="w-5 h-5" />
               Thank you! We will get back to you as soon as possible.
@@ -340,21 +343,44 @@
     <section class="py-12 bg-gray-950 border-t border-gray-800">
       <div class="max-w-4xl mx-auto px-6 text-center">
         <h2 class="text-2xl font-bold text-white mb-6 flex items-center justify-center gap-2">
-          <UIcon name="i-heroicons-share-across" class="w-6 h-6 text-primary-400" />
+          <UIcon name="i-simple-icons-facebook" class="w-6 h-6 text-primary-400" />
           Our Social Media
         </h2>
         <div class="flex justify-center gap-6">
-          <a href="#" class="p-3 rounded-full bg-gray-800 text-gray-400 hover:bg-primary-500/20 hover:text-primary-400 transition-colors" aria-label="Instagram">
-            <UIcon name="i-heroicons-camera" class="w-6 h-6" />
+          <a 
+            href="https://www.facebook.com/eddyfanyministry" 
+            class="p-3 rounded-full bg-gray-800 text-gray-400 hover:bg-primary-500/20 hover:text-primary-400 transition-all duration-300 transform hover:scale-110 cursor-pointer" 
+            aria-label="Facebook"
+          >
+            <UIcon name="i-simple-icons-facebook" class="w-6 h-6" />
           </a>
-          <a href="#" class="p-3 rounded-full bg-gray-800 text-gray-400 hover:bg-primary-500/20 hover:text-primary-400 transition-colors" aria-label="Facebook">
-            <UIcon name="i-heroicons-user-group" class="w-6 h-6" />
+          <a 
+            href="https://twitter.com/eddyfanyministry" 
+            class="p-3 rounded-full bg-gray-800 text-gray-400 hover:bg-primary-500/20 hover:text-primary-400 transition-all duration-300 transform hover:scale-110 cursor-pointer" 
+            aria-label="Twitter"
+          >
+            <UIcon name="i-simple-icons-twitter" class="w-6 h-6" />
           </a>
-          <a href="#" class="p-3 rounded-full bg-gray-800 text-gray-400 hover:bg-primary-500/20 hover:text-primary-400 transition-colors" aria-label="YouTube">
-            <UIcon name="i-heroicons-play-circle" class="w-6 h-6" />
+          <a 
+            href="https://www.instagram.com/eddyfanyministry" 
+            class="p-3 rounded-full bg-gray-800 text-gray-400 hover:bg-primary-500/20 hover:text-primary-400 transition-all duration-300 transform hover:scale-110 cursor-pointer" 
+            aria-label="Instagram"
+          >
+            <UIcon name="i-simple-icons-instagram" class="w-6 h-6" />
           </a>
-          <a href="#" class="p-3 rounded-full bg-gray-800 text-gray-400 hover:bg-primary-500/20 hover:text-primary-400 transition-colors" aria-label="TikTok">
-            <UIcon name="i-heroicons-musical-note" class="w-6 h-6" />
+          <a 
+            href="https://www.youtube.com/@eddyfanyministry" 
+            class="p-3 rounded-full bg-gray-800 text-gray-400 hover:bg-primary-500/20 hover:text-primary-400 transition-all duration-300 transform hover:scale-110 cursor-pointer" 
+            aria-label="YouTube"
+          >
+            <UIcon name="i-simple-icons-youtube" class="w-6 h-6" />
+          </a>
+          <a 
+            href="https://wa.me/254700123456" 
+            class="p-3 rounded-full bg-gray-800 text-gray-400 hover:bg-primary-500/20 hover:text-primary-400 transition-all duration-300 transform hover:scale-110 cursor-pointer" 
+            aria-label="WhatsApp"
+          >
+            <UIcon name="i-simple-icons-whatsapp" class="w-6 h-6" />
           </a>
         </div>
       </div>

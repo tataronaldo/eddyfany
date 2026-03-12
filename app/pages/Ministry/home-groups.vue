@@ -24,7 +24,7 @@
     <section class="py-20 md:py-28 bg-gray-900">
       <div class="max-w-6xl mx-auto px-6">
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-gray-800/50 rounded-2xl border border-gray-700 overflow-hidden hover:border-primary-500/30 transition-colors">
+          <div class="bg-gray-800/50 rounded-2xl border border-gray-700 overflow-hidden hover:border-primary-400/30 transition-colors">
             <div class="aspect-video bg-gray-800">
               <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" alt="Christina's Group" class="w-full h-full object-cover">
             </div>
@@ -44,7 +44,7 @@
               <UButton label="Register" color="primary" size="sm" class="w-full" />
             </div>
           </div>
-          <div class="bg-gray-800/50 rounded-2xl border border-gray-700 overflow-hidden hover:border-primary-500/30 transition-colors">
+          <div class="bg-gray-800/50 rounded-2xl border border-gray-700 overflow-hidden hover:border-primary-400/30 transition-colors">
             <div class="aspect-video bg-gray-800">
               <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop" alt="Maria's Group" class="w-full h-full object-cover">
             </div>
@@ -64,7 +64,7 @@
               <UButton label="Register" color="primary" size="sm" class="w-full" />
             </div>
           </div>
-          <div class="bg-gray-800/50 rounded-2xl border border-gray-700 overflow-hidden hover:border-primary-500/30 transition-colors">
+          <div class="bg-gray-800/50 rounded-2xl border border-gray-700 overflow-hidden hover:border-primary-400/30 transition-colors">
             <div class="aspect-video bg-gray-800">
               <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Mohammed's Group" class="w-full h-full object-cover">
             </div>
@@ -98,22 +98,22 @@
         <form class="mt-8 space-y-6 bg-gray-800/50 rounded-2xl p-8 border border-gray-700" @submit.prevent="onJoinSubmit">
           <div class="grid sm:grid-cols-2 gap-6">
             <UFormGroup label="First Name">
-              <UInput v-model="joinForm.firstName" required />
+              <UInput class="w-full" v-model="joinForm.firstName" required />
             </UFormGroup>
             <UFormGroup label="Last Name">
-              <UInput v-model="joinForm.lastName" required />
+              <UInput class="w-full" v-model="joinForm.lastName" required />
             </UFormGroup>
           </div>
           <div class="grid sm:grid-cols-2 gap-6">
             <UFormGroup label="Phone Number">
-              <UInput v-model="joinForm.phone" type="tel" />
+              <UInput class="w-full" v-model="joinForm.phone" type="tel" />
             </UFormGroup>
             <UFormGroup label="Email">
-              <UInput v-model="joinForm.email" type="email" required />
+              <UInput class="w-full" v-model="joinForm.email" type="email" required />
             </UFormGroup>
           </div>
           <UFormGroup label="What connect group would you like to join?">
-            <USelect v-model="joinForm.group" :items="groupOptions" placeholder="Select a group" />
+            <USelect class="w-full" v-model="joinForm.group" :items="groupOptions" placeholder="Select a group" />
           </UFormGroup>
           <UButton type="submit" label="Submit" size="lg" color="primary" class="w-full" />
           <p v-if="joinSubmitted" class="text-sm text-green-400 flex items-center gap-2">

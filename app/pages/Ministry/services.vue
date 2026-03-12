@@ -99,52 +99,53 @@
         </div>
       </div>
     </section>
-
-    <!-- Upcoming Events -->
+        <!-- Upcoming Events -->
     <section id="events" class="py-20 md:py-28 bg-gray-900 border-t border-gray-800">
       <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-16 flex items-center justify-center gap-2">
+        <div class="flex items-center justify-center gap-3 mb-16">
           <UIcon name="i-heroicons-calendar-days" class="w-10 h-10 text-primary-400" />
-          Upcoming Events
-        </h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-white text-center">
+            Upcoming Events
+          </h2>
+        </div>
         <div class="grid md:grid-cols-2 gap-8">
-          <div class="bg-gray-800/50 rounded-2xl border border-gray-700 overflow-hidden">
+          <div
+            v-for="event in featuredEvents"
+            :key="event.id"
+            class="bg-gray-800/50 rounded-2xl border border-gray-700 overflow-hidden hover:border-primary-400/30 transition-colors"
+          >
             <div class="aspect-video bg-gray-800">
-              <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" alt="" class="w-full h-full object-cover opacity-80">
+              <img :src="event.imageUrl" :alt="event.title" class="w-full h-full object-cover opacity-80">
             </div>
-            <div class="p-8">
-              <div class="flex items-center gap-2 text-primary-400 text-sm font-medium mb-2"><UIcon name="i-heroicons-map-pin" class="w-4 h-4" /> Vancouver</div>
-              <h3 class="text-2xl font-bold text-white mb-2">Grow with Christ</h3>
-              <p class="text-gray-400 text-sm mb-6">Are you ready for spiritual growth? In these 5 days you will get to connect with every member of our beautiful church, dive deeper into Holy Word and realize your full potential.</p>
-              <UButton label="Grow with Christ" color="primary" size="sm" />
-            </div>
-          </div>
-          <div class="bg-gray-800/50 rounded-2xl border border-gray-700 overflow-hidden">
-            <div class="aspect-video bg-gray-800">
-              <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop" alt="" class="w-full h-full object-cover opacity-80">
-            </div>
-            <div class="p-8">
-              <div class="flex items-center gap-2 text-primary-400 text-sm font-medium mb-2"><UIcon name="i-heroicons-map-pin" class="w-4 h-4" /> Toronto</div>
-              <h3 class="text-2xl font-bold text-white mb-2">Love Conference</h3>
-              <p class="text-gray-400 text-sm mb-6">Love Conference 2023 is happening on January 28-30th, 2023 in Toronto, Ontario at the ScotiaBank Arena. You will get to hear incredible teaching, worship focused on love.</p>
-              <UButton label="Love Conference" color="primary" size="sm" />
+            <div class="p-8 md:p-10">
+              <div class="flex flex-wrap items-center gap-3 text-primary-400 text-sm font-medium mb-2">
+                <span class="inline-flex items-center gap-1">
+                  <UIcon name="i-heroicons-calendar-days" class="w-4 h-4" />
+                  {{ event.date }}
+                </span>
+                <span class="inline-flex items-center gap-1 text-primary-300/90">
+                  <UIcon name="i-heroicons-wifi" class="w-4 h-4" />
+                  {{ event.location }}
+                </span>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">
+                {{ event.title }}
+              </h3>
+              <p class="text-gray-400 leading-relaxed mb-6">
+                {{ event.description }}
+              </p>
+              <UButton :to="`/ministry/events#${event.id}`" :label="event.ctaLabel" color="primary" trailing-icon="i-heroicons-arrow-right" />
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Get Involved + App -->
-    <section class="py-20 md:py-28 bg-gray-950 border-t border-gray-800">
-      <div class="max-w-4xl mx-auto px-6 text-center">
-        <h2 class="text-2xl font-bold text-white mb-4 flex items-center justify-center gap-2">
-          <UIcon name="i-heroicons-device-phone-mobile" class="w-8 h-8 text-primary-400" />
-          Download Our App
-        </h2>
-        <p class="text-gray-400 mb-8">Get all of our news, upcoming events and more in one place</p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <UButton label="App Store" color="neutral" variant="outline" class="border-gray-600 text-gray-200" />
-          <UButton label="Google Play" color="neutral" variant="outline" class="border-gray-600 text-gray-200" />
+        <div class="mt-10 text-center">
+          <NuxtLink
+            to="/ministry/events"
+            class="inline-flex items-center gap-2 text-primary-300 hover:text-primary-200 font-medium text-sm uppercase tracking-wide"
+          >
+            View all events
+            <UIcon name="i-heroicons-arrow-right" class="w-4 h-4" />
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -152,3 +153,7 @@
     <ChurchHomeFooter />
   </div>
 </template>
+<script setup lang="ts">
+import { ministryEvents } from '../../data/ministryEvents'
+const featuredEvents = computed(() => ministryEvents.slice(0, 2))
+</script>

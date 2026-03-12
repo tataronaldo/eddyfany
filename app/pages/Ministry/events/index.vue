@@ -43,7 +43,7 @@
             v-for="event in events"
             :id="event.id"
             :key="event.id"
-            class="bg-gray-800/60 rounded-2xl border border-gray-700 overflow-hidden flex flex-col hover:border-primary-500/40 transition-colors"
+            class="bg-gray-800/60 rounded-2xl border border-gray-700 overflow-hidden flex flex-col hover:border-primary-400/40 transition-all duration-300 transform hover:scale-105 cursor-pointer"
           >
             <div class="aspect-video bg-gray-800">
               <img :src="event.imageUrl" :alt="event.title" class="w-full h-full object-cover">
@@ -72,7 +72,14 @@
                 <span class="text-xs uppercase tracking-wide text-gray-400">
                   {{ event.type }}
                 </span>
-                <UButton :label="event.ctaLabel" color="primary" size="sm" trailing-icon="i-heroicons-arrow-right" />
+                <UButton 
+                  :label="event.ctaLabel" 
+                  color="primary" 
+                  size="sm" 
+                  trailing-icon="i-heroicons-arrow-right"
+                  :to="`/ministry/events/${event.id}`"
+                  class="transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                />
               </div>
             </div>
           </article>
@@ -85,7 +92,7 @@
 </template>
 
 <script setup lang="ts">
-import { ministryEvents } from '../../data/ministryEvents'
+import { ministryEvents } from '../../../data/ministryEvents'
 
 const events = ministryEvents
 </script>

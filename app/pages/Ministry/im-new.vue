@@ -29,7 +29,7 @@
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div class="order-2 md:order-1">
             <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-500/20 text-primary-400 font-bold text-lg mb-6">1</span>
-            <h2 class="text-3xl font-bold text-white mb-6">Visit your first ChurchHome service</h2>
+            <h2 class="text-3xl font-bold text-white mb-6">Attend your first Online service</h2>
             <p class="text-gray-400 leading-relaxed mb-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
             </p>
@@ -55,7 +55,7 @@
           </div>
           <div>
             <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-500/20 text-primary-400 font-bold text-lg mb-6">2</span>
-            <h2 class="text-3xl font-bold text-white mb-6">Sign up for a home group</h2>
+            <h2 class="text-3xl font-bold text-white mb-6">Sign up for our daily sermons</h2>
             <p class="text-gray-400 leading-relaxed mb-8">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero.
             </p>
@@ -123,25 +123,25 @@
         <form class="mt-8 space-y-6 bg-gray-800/50 rounded-2xl p-8 border border-gray-700" @submit.prevent="onContactSubmit">
           <div class="grid sm:grid-cols-2 gap-6">
             <UFormGroup label="First Name">
-              <UInput v-model="contactForm.firstName" required />
+              <UInput class="w-full" v-model="contactForm.firstName" required />
             </UFormGroup>
             <UFormGroup label="Last Name">
-              <UInput v-model="contactForm.lastName" required />
+              <UInput class="w-full" v-model="contactForm.lastName" required />
             </UFormGroup>
           </div>
           <div class="grid sm:grid-cols-2 gap-6">
             <UFormGroup label="Phone Number">
-              <UInput v-model="contactForm.phone" type="tel" />
+              <UInput class="w-full" v-model="contactForm.phone" type="tel" />
             </UFormGroup>
             <UFormGroup label="Email">
-              <UInput v-model="contactForm.email" type="email" required />
+              <UInput class="w-full" v-model="contactForm.email" type="email" required />
             </UFormGroup>
           </div>
           <UFormGroup label="Message/Questions">
-            <UTextarea v-model="contactForm.message" :rows="4" />
+            <UTextarea class="w-full" v-model="contactForm.message" :rows="4" />
           </UFormGroup>
           <UFormGroup label="Preferred method of communication">
-            <USelect v-model="contactForm.preference" :items="['E-mail', 'Text']" />
+            <USelect class="w-full" v-model="contactForm.preference" :items="['E-mail', 'Text']" />
           </UFormGroup>
           <UButton type="submit" label="Send" size="lg" color="primary" class="w-full" />
           <p v-if="contactSubmitted" class="text-sm text-green-400 flex items-center gap-2">
@@ -192,7 +192,7 @@ const faqItems = [
     content: 'Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.'
   },
   {
-    label: 'How can I become a member of ChurchHome?',
+    label: 'How can I become a member of Eddy Fany Ministry?',
     content: 'Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.'
   },
   {
